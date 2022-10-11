@@ -16,3 +16,4 @@ SistemaPedidosRestaurante/nbproject/private/private.properties
 SistemaPedidosRestaurante/nbproject/project.properties
 SistemaPedidosRestaurante/nbproject/project.xml
 *.properties
+*.war
