@@ -16,9 +16,9 @@ import java.util.List;
 public interface IUsuarioDao {
     List<UsuarioBean> Listar(String descripcion) throws SQLException;
 
-    UsuarioBean insertar(UsuarioBean producto) throws SQLException;
+    UsuarioBean insertar(UsuarioBean usuario) throws SQLException;
 
-    UsuarioBean actualizar(UsuarioBean producto) throws SQLException;
+    UsuarioBean actualizar(UsuarioBean usuario) throws SQLException;
 
     void eliminar(int UserID) throws SQLException;
 }
