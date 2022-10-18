@@ -23,13 +23,15 @@ public class Conexion {
         try {
             Class.forName(driver);
         } catch (Exception e) {
-            System.out.println("Error al establecer clase de la conexión " + e.toString());
+            System.err.println("Error al establecer clase de la conexión " + e.toString());
         }
     }
     
-    public Connection getConexion() throws Exception{
+    public static Connection obtenerConexion() throws Exception{
         Connection conexion = DriverManager.getConnection(url,usuario,contrasenia);
         return conexion;
     }
+
+	
     
 }

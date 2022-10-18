@@ -5,6 +5,8 @@
 package com.utp.dwi.dao;
 
 import com.utp.dwi.bean.ProductoBean;
+import com.utp.dwi.dto.ProductoDTO;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -12,8 +14,13 @@ import java.util.List;
  * @author JMR CODE
  */
 public interface IProductoDao {
-    
-    List<ProductoBean> listarProducto();
-    
-    
+
+    List<ProductoDTO> listarProducto(String descripcion) throws SQLException;
+
+    ProductoBean insertar(ProductoBean producto) throws SQLException;
+
+    ProductoBean actualizar(ProductoBean producto) throws SQLException;
+
+    void eliminar(int productoID) throws SQLException;
+
 }

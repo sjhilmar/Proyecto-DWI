@@ -19,6 +19,14 @@ private String descripcion;
     public String getDescripcion() {
         return descripcion;
     }
+
+    public void setTipoUsuarioID(Integer tipoUsuarioID) {
+        this.tipoUsuarioID = tipoUsuarioID;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
     
 
     

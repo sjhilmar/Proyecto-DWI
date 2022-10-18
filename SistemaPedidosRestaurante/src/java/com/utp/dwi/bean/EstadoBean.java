@@ -27,6 +27,18 @@ public class EstadoBean {
 
     public EstadoBean() {
     }
+
+    public void setEstadoID(Integer estadoID) {
+        this.estadoID = estadoID;
+    }
+
+    public void setCodigoEstado(String codigoEstado) {
+        this.codigoEstado = codigoEstado;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
     
     
 }

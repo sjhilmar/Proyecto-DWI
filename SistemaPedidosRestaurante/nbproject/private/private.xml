@@ -2,6 +2,27 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dao/IOrdenVentaDao.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/bean/EstadoBean.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dto/OrdenVentaDTO.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/bean/ProductoBean.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dto/OrdenVentaDetalleDTO.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dao/IProductoDao.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dao/impl/OrdenVentaImpl.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dao/IOrdenVentaDetalleDao.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dao/impl/OrdenVentaDetalleImpl.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/bean/UsuarioBean.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dto/ProductoDTO.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/bean/TipoProductoBean.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/util/Conexion.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dao/IUsuarioDao.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/servlet/ProductoServlet.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/dao/impl/ProductoDaoImpl.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/web/META-INF/context.xml</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/bean/TipoUsuarioBean.java</file>
+            <file>file:/C:/Users/JMR%20CODE/Documents/GitHub/Proyecto-DWI/SistemaPedidosRestaurante/src/java/com/utp/dwi/bean/TipoDocumentoBean.java</file>
+        </group>
     </open-files>
 </project-private>
