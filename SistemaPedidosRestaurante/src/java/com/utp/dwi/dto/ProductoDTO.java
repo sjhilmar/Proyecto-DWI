@@ -20,6 +20,7 @@ private Double precioUnitario;
 private String observacion;
 private String tipoProductoDescripcion;
 private String estado;
+private String imagen;
 
     public Integer getProductoID() {
         return productoID;
@@ -77,4 +78,14 @@ private String estado;
         this.estado = estado;
     }
 
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    
+    
 }

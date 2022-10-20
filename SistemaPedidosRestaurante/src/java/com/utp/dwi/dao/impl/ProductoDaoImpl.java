@@ -8,14 +8,12 @@ import com.utp.dwi.bean.ProductoBean;
 import com.utp.dwi.dao.IProductoDao;
 import com.utp.dwi.dto.ProductoDTO;
 import com.utp.dwi.util.Conexion;
-import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -29,14 +27,16 @@ public class ProductoDaoImpl implements IProductoDao {
 
     @Override
     public List<ProductoDTO> listarProducto(String descripcion) throws SQLException {
-        List<ProductoDTO> lista = null;
+        ArrayList<ProductoDTO>  lista =  new ArrayList<>();
         String query = "select \n"
                 + "t1.productoID, \n"
                 + "t1.codigoProducto, \n"
                 + "t1.descripcion,\n"
                 + "t1.precioUnitario,\n"
-                + "t2.descripcion as tipoProducto,\n"
-                + "t3.descripcion as estado\n"
+                + "t2.descripcion as tipoProducto, \n"
+                + "t1.observacion,\n"
+                + "t3.descripcion as estado, \n"
+                + "t1.imagen\n"
                 + "from producto t1\n"
                 + "inner join tipoProducto t2 on t1.tipoProductoID=t2.tipoProductoID\n"
                 + "inner join estado t3 on t1.estadoID=t3.estadoID\n"
@@ -45,10 +45,9 @@ public class ProductoDaoImpl implements IProductoDao {
         try {
             con = Conexion.obtenerConexion();
             stmt = con.prepareStatement(query);
-
-            stmt.setString(0, "%" + descripcion + "%");
+            stmt.setString(1, "%" + descripcion + "%");
             rs = stmt.executeQuery();
-
+            
             while (rs.next()) {
                 ProductoDTO producto = new ProductoDTO();
                 producto.setProductoID(rs.getInt("productoID"));
@@ -57,6 +56,7 @@ public class ProductoDaoImpl implements IProductoDao {
                 producto.setPrecioUnitario(rs.getDouble("precioUnitario"));
                 producto.setTipoProductoDescripcion(rs.getString("tipoProducto"));
                 producto.setEstado(rs.getString("estado"));
+                producto.setImagen(rs.getString("imagen"));
                 lista.add(producto);
 
             }

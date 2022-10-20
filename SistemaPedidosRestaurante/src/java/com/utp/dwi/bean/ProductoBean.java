@@ -17,6 +17,7 @@ private Double precioUnitario;
 private String observacion;
 private TipoProductoBean tipoProductoBean;
 private EstadoBean estadoBean;
+private String imagen;
 
     public Integer getProductoID() {
         return productoID;
@@ -75,6 +76,14 @@ private EstadoBean estadoBean;
     }
 
     public ProductoBean() {
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public ProductoBean(Integer productoID, String codigoProducto, String descripcion, Double precioUnitario, String observacion, TipoProductoBean tipoProductoBean, EstadoBean estadoBean) {

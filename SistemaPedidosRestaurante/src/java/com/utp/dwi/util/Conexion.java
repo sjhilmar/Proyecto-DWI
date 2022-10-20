@@ -6,7 +6,7 @@ package com.utp.dwi.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.*;
+
 
 /**
  *
@@ -17,7 +17,7 @@ public class Conexion {
     private static String driver ="com.mysql.jdbc.Driver";
     private static String usuario="root";
     private static String contrasenia="root";
-    private static String url="jdbc:mysql://localhost:3306/BDRESTAURANT";
+    private static String url="jdbc:mysql://localhost:3306/bdrestaurant";
     
     static {
         try {
