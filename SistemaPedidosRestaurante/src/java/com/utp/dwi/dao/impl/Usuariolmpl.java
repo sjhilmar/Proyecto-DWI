@@ -54,19 +54,16 @@ public class Usuariolmpl implements IUsuarioDao{
             stmt.setString(10, usuario.getDistrito());
             stmt.setString(11, usuario.getDireccion());            
             stmt.setInt(12, usuario.getTipoUsuarioBean().getTipoUsuarioID());
-            int i = stmt.executeUpdate();
+            rs = stmt.executeQuery();
 
-            if (i != 1) {
-                throw new SQLException("No se pudo insertar");
-            }
 
         } catch (Exception e) {
             System.err.println(e.getMessage());
 
-        } finally {
+        //} finally {
 
-            stmt.close();
-            con.close();
+         //   stmt.close();
+         //   con.close();
         }
 
         return usuario;
@@ -98,4 +95,5 @@ public class Usuariolmpl implements IUsuarioDao{
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+   
 }
