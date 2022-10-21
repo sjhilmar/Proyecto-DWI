@@ -64,9 +64,9 @@
                             <div>
                                 <h3><label class="today_special__title">${p.getDescripcion()} </label></h3>
                                 <label class="today_special__price">${p.getPrecioUnitario()}</label>
-                                <p class="today_special__title" >${p.getObservacion()}</p>
                             </div>
                             <img src="${p.getImagen()}" alt="" class="gallery__img gallery__img--small">
+                            <p class="today_special__title" >${p.getObservacion()}</p>
                             <!--                            <img src="img/gallery/gallery1.jpg" alt="" class="gallery__img gallery__img--big">
                                                             <img src="img/gallery/gallery2.jpg" alt="" class="gallery__img gallery__img--small">-->
                         </div>

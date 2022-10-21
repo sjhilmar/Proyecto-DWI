@@ -40,7 +40,7 @@ public class ProductoDaoImpl implements IProductoDao {
                 + "from producto t1\n"
                 + "inner join tipoProducto t2 on t1.tipoProductoID=t2.tipoProductoID\n"
                 + "inner join estado t3 on t1.estadoID=t3.estadoID\n"
-                + "where t1.descripcion like ? and t1.estadoID =6;";
+                + "where t1.descripcion like ? and t1.estadoID =6 order by t2.tipoProductoID desc";
 
         try {
             con = Conexion.obtenerConexion();

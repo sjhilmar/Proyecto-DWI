@@ -22,7 +22,7 @@ public class Conexion {
     static {
         try {
             Class.forName(driver);
-          
+
         } catch (Exception e) {
             System.out.println("Error al establecer clase de la conexión " + e.toString());
         }
