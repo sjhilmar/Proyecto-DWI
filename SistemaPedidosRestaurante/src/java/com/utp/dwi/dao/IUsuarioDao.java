@@ -21,4 +21,6 @@ public interface IUsuarioDao {
     UsuarioBean actualizar(UsuarioBean usuario) throws SQLException;
 
     void eliminar(int UserID) throws SQLException;
+
+   
 }

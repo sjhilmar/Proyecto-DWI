@@ -118,7 +118,7 @@
                         <label for="tipo_usuario" class="formulario__label" >Tipo Usuario:</label>
                         <input type="text" class="formulario__input-txt" name="tipo_usuario">
 
-                        <input type="submit" class="btn formulario__btn" value="Registrarse" name="Registrar">
+                        <input type="submit" class="btn formulario__btn" value="Registrar" name="Registrar">
                     </form> 
                     <!--</div>-->
                 </div>

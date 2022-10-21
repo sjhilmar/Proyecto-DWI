@@ -4,8 +4,13 @@
  */
 package com.utp.dwi.servlet;
 
+import com.utp.dwi.dao.IUsuarioDao;
+import com.utp.dwi.dao.impl.Usuariolmpl;
+import com.utp.dwi.dto.UsuarioDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,38 +25,19 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "UsuarioServlet", urlPatterns = {"/UsuarioServlet"})
 public class UsuarioServlet extends HttpServlet {
 
-    String usuario="usuario.html";
-    String index="index.html";
-    String acceso="";
+    //String usuario="usuario.html";
+    //String index="index.html";
+    //String acceso="";
+    
+    Usuariolmpl InsDao= new Usuariolmpl() ;
+    List<UsuarioDTO> listaUsuario = new ArrayList<>();
       
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       String accion=request.getParameter("Registrar");
-       if(accion.equals("usuario")){
-           acceso=usuario;
-       }
-       else if(accion.equals("Registrar")){
-           
-           int id=Integer.parseInt(request.getParameter("userID"));
-           String usu=request.getParameter("usuario");
-           String con=request.getParameter("contrasenia");
-           String nom=request.getParameter("nombres");
-           String ape=request.getParameter("apellidos");
-           int tdoc=Integer.parseInt(request.getParameter("tipo_documento"));
-           String ndoc=request.getParameter("numero_documento");
-           String corr=request.getParameter("correo");
-           String dep=request.getParameter("departamento");
-           String pro=request.getParameter("Provincia");
-           String dis=request.getParameter("Distrito");
-           String tel=request.getParameter("direccion");
-           int tusu=Integer.parseInt(request.getParameter("tipo_usuario"));
-           
        
-           
-       }
-       RequestDispatcher dispatcher=request.getRequestDispatcher(acceso);
-       dispatcher.forward(request, response);
+     
+     
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -66,7 +52,9 @@ public class UsuarioServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       // processRequest(request, response);
+        
+       
     }
 
     /**
@@ -80,7 +68,37 @@ public class UsuarioServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       // processRequest(request, response);
+    
+         String accion=request.getParameter("Registrar");
+        if(accion.equalsIgnoreCase("Registrar")){
+            int id=Integer.parseInt(request.getParameter("userID"));
+           String usu=request.getParameter("usuario");
+           String con=request.getParameter("contrasenia");
+           String nom=request.getParameter("nombres");
+           String ape=request.getParameter("apellidos");
+           int tdoc=Integer.parseInt(request.getParameter("tipo_documento"));
+           String ndoc=request.getParameter("numero_documento");
+           String corr=request.getParameter("correo");
+           String dep=request.getParameter("departamento");
+           String pro=request.getParameter("Provincia");
+           String dis=request.getParameter("Distrito");
+           String dir=request.getParameter("direccion");
+           int tusu=Integer.parseInt(request.getParameter("tipo_usuario"));
+           //String usuario=
+           
+           
+           
+           listaUsuario.add(new UsuarioDTO(id,usu,con,nom,ape,tdoc,ndoc,corr,dep,pro,dis,dir,tusu));
+           //InsDao.insertar(listaUsuario());
+           String msj = "Usuario Registrado";
+           request.setAttribute("msj",msj);
+           request.getRequestDispatcher("index.jsp").forward(request, response);
+        }
+        
+        
+        
+    
     }
 
     /**
