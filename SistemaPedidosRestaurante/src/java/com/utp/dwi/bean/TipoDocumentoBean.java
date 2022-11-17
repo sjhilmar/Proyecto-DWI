@@ -9,14 +9,14 @@ package com.utp.dwi.bean;
  * @author JMR CODE
  */
 public class TipoDocumentoBean {
-    private Integer tipoDocumentoID;
+    private int tipoDocumentoID;
     private String descripcionDocumnto;
 
-    public Integer getTipoDocumentoID() {
+    public int getTipoDocumentoID() {
         return tipoDocumentoID;
     }
 
-    public void setTipoDocumentoID(Integer tipoDocumentoID) {
+    public void setTipoDocumentoID(int tipoDocumentoID) {
         this.tipoDocumentoID = tipoDocumentoID;
     }
 
@@ -36,7 +36,7 @@ public class TipoDocumentoBean {
     public TipoDocumentoBean() {
     }
 
-    public TipoDocumentoBean(Integer tipoDocumentoID, String descripcionDocumnto) {
+    public TipoDocumentoBean(int tipoDocumentoID, String descripcionDocumnto) {
         this.tipoDocumentoID = tipoDocumentoID;
         this.descripcionDocumnto = descripcionDocumnto;
     }

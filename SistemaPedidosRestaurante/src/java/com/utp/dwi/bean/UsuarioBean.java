@@ -15,14 +15,14 @@ public class UsuarioBean {
     private String contrasenia;
     private String nombre;
     private String apellidos;
-    private TipoDocumentoBean tipoDocumentoBean;
+    private int tipoDocumentoBean;
     private String numeroDocumento;
     private String correo;
     private String departamento;
     private String provincia;
     private String distrito;
     private String direccion;
-    private TipoUsuarioBean tipoUsuarioBean;
+    private int tipoUsuarioBean;
 
     public Integer getUserID() {
         return userID;
@@ -64,11 +64,11 @@ public class UsuarioBean {
         this.apellidos = apellidos;
     }
 
-    public TipoDocumentoBean getTipoDocumentoBean() {
+    public int getTipoDocumentoBean() {
         return tipoDocumentoBean;
     }
 
-    public void setTipoDocumentoBean(TipoDocumentoBean tipoDocumentoBean) {
+    public void setTipoDocumentoBean(int tipoDocumentoBean) {
         this.tipoDocumentoBean = tipoDocumentoBean;
     }
 
@@ -120,18 +120,18 @@ public class UsuarioBean {
         this.direccion = direccion;
     }
 
-    public TipoUsuarioBean getTipoUsuarioBean() {
+    public int getTipoUsuarioBean() {
         return tipoUsuarioBean;
     }
 
-    public void setTipoUsuarioBean(TipoUsuarioBean tipoUsuarioBean) {
+    public void setTipoUsuarioBean(int tipoUsuarioBean) {
         this.tipoUsuarioBean = tipoUsuarioBean;
     }
 
     public UsuarioBean() {
     }
 
-    public UsuarioBean(Integer userID, String usuario, String contrasenia, String nombre, String apellidos, TipoDocumentoBean tipoDocumentoBean, String numeroDocumento, String correo, String departamento, String provincia, String distrito, String direccion, TipoUsuarioBean tipoUsuarioBean) {
+    public UsuarioBean(Integer userID, String usuario, String contrasenia, String nombre, String apellidos, int tipoDocumentoBean, String numeroDocumento, String correo, String departamento, String provincia, String distrito, String direccion, int tipoUsuarioBean) {
         this.userID = userID;
         this.usuario = usuario;
         this.contrasenia = contrasenia;
@@ -147,6 +147,7 @@ public class UsuarioBean {
         this.tipoUsuarioBean = tipoUsuarioBean;
     }
     
+   
     
     
     

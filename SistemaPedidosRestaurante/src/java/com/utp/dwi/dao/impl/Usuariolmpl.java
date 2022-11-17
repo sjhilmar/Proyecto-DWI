@@ -21,7 +21,7 @@ import java.util.List;
 public class Usuariolmpl implements IUsuarioDao{
       protected Connection con = null;
     protected PreparedStatement stmt = null;
-    protected ResultSet rs = null;
+    protected int rs = 0;
 
     //String query = "INSERT INTO producto (codigoProducto,descripcion,precioUnitario,observacion,tipoProductoID,estadoID) VALUES(?,?,?,?,?,?);";
 
@@ -36,7 +36,7 @@ public class Usuariolmpl implements IUsuarioDao{
 
     @Override
     public UsuarioBean insertar(UsuarioBean usuario) throws SQLException {
-      String query = "INSERT INTO usuario (userID,usuario,contrasenia,nombre,apellidos,tipoDocumentoID,numeroDocumento,correo,departamento,provincia,distrito,direccion,tipoUsuarioID) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);";
+      String query = "INSERT INTO usuario (userId, usuario,contrasenia,nombre,apellidos,tipoDocumentoID,numeroDocumento,correo,departamento,provincia,distrito,direccion,tipoUsuarioID) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);";
     
       try {
             con = Conexion.obtenerConexion();
@@ -46,24 +46,24 @@ public class Usuariolmpl implements IUsuarioDao{
             stmt.setString(2, usuario.getContrasenia());
             stmt.setString(3, usuario.getNombre());
             stmt.setString(4, usuario.getApellidos());
-            stmt.setInt(5, usuario.getTipoDocumentoBean().getTipoDocumentoID());
+            stmt.setInt(5, usuario.getTipoDocumentoBean());
             stmt.setString(6, usuario.getNumeroDocumento());
             stmt.setString(7, usuario.getCorreo());
             stmt.setString(8, usuario.getDepartamento());
             stmt.setString(9, usuario.getProvincia());
             stmt.setString(10, usuario.getDistrito());
             stmt.setString(11, usuario.getDireccion());            
-            stmt.setInt(12, usuario.getTipoUsuarioBean().getTipoUsuarioID());
-            rs = stmt.executeQuery();
+            stmt.setInt(12, usuario.getTipoUsuarioBean());
+            rs= stmt.executeUpdate();
 
 
         } catch (Exception e) {
             System.err.println(e.getMessage());
 
-        //} finally {
+        } finally {
 
-         //   stmt.close();
-         //   con.close();
+           stmt.close();
+           con.close();
         }
 
         return usuario;

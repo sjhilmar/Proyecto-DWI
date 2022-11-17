@@ -58,7 +58,7 @@
                     <!--<div class="contact-information column column--50">-->
 
 
-                    <form action="" method="post" class="formulario column column--50" >
+                    <form action="UsuarioServlet" method="post" class="formulario column column--50" >
 
                         <label for="userID" class="formulario__label" >UserID:</label>
                         <input type="text" class="formulario__input-txt" name="userID">        
@@ -71,7 +71,13 @@
                         <label for="apellidos" class="formulario__label" >Apellidos:</label>
                         <input type="text" class="formulario__input-txt" name="apellidos">
                         <label for="tipo_documento" class="formulario__label" >Tipo de Documento:</label>
-                        <input type="text" class="formulario__input-txt" name="tipo_documento">
+                        <select  class="formulario__input-txt" name="tipo_documento">
+                            <option value="1" id="1">DNI</option>
+                            <option value="4" id="4">CARNET DE EXTRANJERÍA</option>
+                            <option value="6" id="6">RUC</option>
+                            <option value="7" id="7">PASAPORTE</option>
+                            <option value="0" id="0">OTRO TIPO DE DOCUMENTOS</option>
+                        </select>
                         <label for="numero_documento" class="formulario__label" >Numero de Documento:</label>
                         <input type="text" class="formulario__input-txt" name="numero_documento">
 
@@ -116,9 +122,11 @@
                         <label for="direccion" class="formulario__label" >Dirección:</label>
                         <input type="text" class="formulario__input-txt" name="direccion">
                         <label for="tipo_usuario" class="formulario__label" >Tipo Usuario:</label>
-                        <input type="text" class="formulario__input-txt" name="tipo_usuario">
-
-                        <input type="submit" class="btn formulario__btn" value="Registrar" name="Registrar">
+                        
+                        
+                        <input type="text" class="formulario__input-txt" name="tipo_usuario" value="3">
+                         
+                        <input type="submit" class="btn formulario__btn" value="Registrar" name="accion">
                     </form> 
                     <!--</div>-->
                 </div>
