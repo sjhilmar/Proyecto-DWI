@@ -21,7 +21,7 @@ import java.util.List;
 public class Usuariolmpl implements IUsuarioDao{
       protected Connection con = null;
     protected PreparedStatement stmt = null;
-    protected int rs = 0;
+    protected String mensaje = "";
 
     //String query = "INSERT INTO producto (codigoProducto,descripcion,precioUnitario,observacion,tipoProductoID,estadoID) VALUES(?,?,?,?,?,?);";
 
@@ -35,13 +35,13 @@ public class Usuariolmpl implements IUsuarioDao{
     //}
 
     @Override
-    public UsuarioBean insertar(UsuarioBean usuario) throws SQLException {
-      String query = "INSERT INTO usuario (userId, usuario,contrasenia,nombre,apellidos,tipoDocumentoID,numeroDocumento,correo,departamento,provincia,distrito,direccion,tipoUsuarioID) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);";
+    public String insertar(UsuarioBean usuario) throws SQLException {
+      String query = "INSERT INTO usuario (userID, usuario,contrasenia,nombre,apellidos,tipoDocumentoID,numeroDocumento,correo,departamento,provincia,distrito,direccion,tipoUsuarioID) VALUES(null,?,?,?,?,?,?,?,?,?,?,?,?);";
     
       try {
             con = Conexion.obtenerConexion();
             stmt = con.prepareStatement(query);
-            stmt.setInt(0, usuario.getUserID());
+          //  stmt.setInt(0, usuario.getUserID());
             stmt.setString(1, usuario.getUsuario());
             stmt.setString(2, usuario.getContrasenia());
             stmt.setString(3, usuario.getNombre());
@@ -54,19 +54,15 @@ public class Usuariolmpl implements IUsuarioDao{
             stmt.setString(10, usuario.getDistrito());
             stmt.setString(11, usuario.getDireccion());            
             stmt.setInt(12, usuario.getTipoUsuarioBean());
-            rs= stmt.executeUpdate();
+            stmt.executeUpdate();
 
-
+            mensaje="Agregado";
         } catch (Exception e) {
-            System.err.println(e.getMessage());
+           mensaje = e.getMessage();
 
-        } finally {
+        } 
 
-           stmt.close();
-           con.close();
-        }
-
-        return usuario;
+        return mensaje;
     
     }
 

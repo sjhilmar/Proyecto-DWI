@@ -58,20 +58,20 @@
                     <!--<div class="contact-information column column--50">-->
 
 
-                    <form action="UsuarioServlet" method="post" class="formulario column column--50" >
+                    <form action="UsuarioServlet01" method="post" class="formulario column column--50" >
 
-                        <label for="userID" class="formulario__label" >UserID:</label>
-                        <input type="text" class="formulario__input-txt" name="userID">        
+                       <!-- <label for="userID" class="formulario__label" >UserID:</label> -->
+                        <input type="hidden"  name="accion" value="InsertarUsuario">        
                         <label for="usuario" class="formulario__label" >Usuario:</label>
-                        <input type="text" class="formulario__input-txt" name="usuario">
+                        <input type="text" class="formulario__input-txt" name="usuario" id="usuario">
                         <label for="contrasenia" class="formulario__label" >Contraseña:</label>
-                        <input type="password" class="formulario__input-txt" name="contrasenia">
+                        <input type="password" class="formulario__input-txt" name="contrasenia" id="contrasenia">
                         <label for="nombres" class="formulario__label" >Nombres:</label>
-                        <input type="text" class="formulario__input-txt" name="nombres">
+                        <input type="text" class="formulario__input-txt" name="nombres" id="nombres">
                         <label for="apellidos" class="formulario__label" >Apellidos:</label>
-                        <input type="text" class="formulario__input-txt" name="apellidos">
+                        <input type="text" class="formulario__input-txt" name="apellidos" id="apellidos">
                         <label for="tipo_documento" class="formulario__label" >Tipo de Documento:</label>
-                        <select  class="formulario__input-txt" name="tipo_documento">
+                        <select  class="formulario__input-txt" name="tipo_documento" id="tipo_documento">
                             <option value="1" id="1">DNI</option>
                             <option value="4" id="4">CARNET DE EXTRANJERÍA</option>
                             <option value="6" id="6">RUC</option>
@@ -79,7 +79,7 @@
                             <option value="0" id="0">OTRO TIPO DE DOCUMENTOS</option>
                         </select>
                         <label for="numero_documento" class="formulario__label" >Numero de Documento:</label>
-                        <input type="text" class="formulario__input-txt" name="numero_documento">
+                        <input type="text" class="formulario__input-txt" name="numero_documento" id="numero_documento">
 
                 <!--    </form>
                     </div>-->
@@ -87,9 +87,9 @@
                     <!--<div class="contact-information column column--50">
                     <form action="" method="post" class="formulario column column--50" >-->
                         <label for="Correo" class="formulario__label" >Correo:</label>
-                        <input type="text" class="formulario__input-txt" name="Correo">
+                        <input type="text" class="formulario__input-txt" name="Correo" id="Correo">
                         <label for="Departamento" class="formulario__label" >Departamento:</label>
-                        <select class="formulario__input-txt" name="Departamento">
+                        <select class="formulario__input-txt" name="Departamento" id="Departamento">
                             <option>Ancash</option>
                             <option>Apurimac</option>
                             <option>Arequipa</option>
@@ -116,19 +116,20 @@
                             <option>Ucayali.</option>
                         </select>
                         <label for="Provincia" class="formulario__label" >Provincia:</label>
-                        <input type="text" class="formulario__input-txt" name="Provincia">
+                        <input type="text" class="formulario__input-txt" name="Provincia" id="Provincia">
                         <label for="Distrito" class="formulario__label" >Distrito:</label>
-                        <input type="text" class="formulario__input-txt" name="Distrito">
+                        <input type="text" class="formulario__input-txt" name="Distrito" id="Distrito">
                         <label for="direccion" class="formulario__label" >Dirección:</label>
-                        <input type="text" class="formulario__input-txt" name="direccion">
+                        <input type="text" class="formulario__input-txt" name="direccion" id="direccion">
                         <label for="tipo_usuario" class="formulario__label" >Tipo Usuario:</label>
                         
                         
-                        <input type="text" class="formulario__input-txt" name="tipo_usuario" value="3">
+                        <input type="text" class="formulario__input-txt" name="tipo_usuario" id="tipo_usuario" value="3">
                          
-                        <input type="submit" class="btn formulario__btn" value="Registrar" name="accion">
+                        <input type="submit" class="btn formulario__btn" value="Registrar">
                     </form> 
-                    <!--</div>-->
+                    $(mensaje)
+                    $(error)
                 </div>
             </section>
 
