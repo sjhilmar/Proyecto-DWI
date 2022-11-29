@@ -29,10 +29,11 @@
             <div class="container container--flex">
                 <span class="icon-menu" id="btnmenu"></span>
                 <ul class="menu" id="menu">
-                    <li class="menu__item"><a href="index.jsp" class="menu__link menu__link--select">Inicio</a></li>
+                    <li class="menu__item"><a href="index.jsp" class="menu__link">Inicio</a></li>
                     <li class="menu__item"><a href="nosotros.jsp" class="menu__link">Nosotros</a></li>
                     <li class="menu__item"><a href="ProductoServlet?galeria" class="menu__link">Galería</a></li>
                     <li class="menu__item"><a href="contacto.jsp" class="menu__link">Contacto</a></li>
+                     <li class="menu__item"><a href="usuario.jsp" class="menu__link menu__link--select">Registrarse</a></li>
                 </ul>
                 <div class="social-icon">
                     <a href="" class="social-icon__link"><span class="icon-facebook"></span></a>
@@ -60,7 +61,7 @@
 
                     <form action="UsuarioServlet01" method="post" class="formulario column column--50" >
 
-                       <!-- <label for="userID" class="formulario__label" >UserID:</label> -->
+                        <!-- <label for="userID" class="formulario__label" >UserID:</label> -->
                         <input type="hidden"  name="accion" value="InsertarUsuario">        
                         <label for="usuario" class="formulario__label" >Usuario:</label>
                         <input type="text" class="formulario__input-txt" name="usuario" id="usuario">
@@ -81,55 +82,23 @@
                         <label for="numero_documento" class="formulario__label" >Numero de Documento:</label>
                         <input type="text" class="formulario__input-txt" name="numero_documento" id="numero_documento">
 
-                <!--    </form>
-                    </div>-->
-
-                    <!--<div class="contact-information column column--50">
-                    <form action="" method="post" class="formulario column column--50" >-->
                         <label for="Correo" class="formulario__label" >Correo:</label>
                         <input type="text" class="formulario__input-txt" name="Correo" id="Correo">
                         <label for="Departamento" class="formulario__label" >Departamento:</label>
-                        <select class="formulario__input-txt" name="Departamento" id="Departamento">
-                            <option>Ancash</option>
-                            <option>Apurimac</option>
-                            <option>Arequipa</option>
-                            <option>Ayacucho</option>
-                            <option>Cajamarca</option>
-                            <option>Callao</option>
-                            <option>Cusco</option>
-                            <option>Huancavelica</option>
-                            <option>Huanuco</option>
-                            <option>Ica</option>
-                            <option>Junín</option>
-                            <option>LaLibertad</option>
-                            <option>Lambayeque</option>
-                            <option>Lima</option>
-                            <option>Loreto</option>
-                            <option>MadredeDios</option>
-                            <option>Moquegua</option>
-                            <option>Pasco</option>
-                            <option>Piura</option>
-                            <option>Puno</option>
-                            <option>SanMartín</option>
-                            <option>Tacna</option>
-                            <option>Tumbes</option>
-                            <option>Ucayali.</option>
-                        </select>
+                        <input type="text" class="formulario__input-txt" name="departamento" id="departamento">
                         <label for="Provincia" class="formulario__label" >Provincia:</label>
                         <input type="text" class="formulario__input-txt" name="Provincia" id="Provincia">
                         <label for="Distrito" class="formulario__label" >Distrito:</label>
                         <input type="text" class="formulario__input-txt" name="Distrito" id="Distrito">
                         <label for="direccion" class="formulario__label" >Dirección:</label>
                         <input type="text" class="formulario__input-txt" name="direccion" id="direccion">
-                        <label for="tipo_usuario" class="formulario__label" >Tipo Usuario:</label>
-                        
-                        
-                        <input type="text" class="formulario__input-txt" name="tipo_usuario" id="tipo_usuario" value="3">
-                         
+                        <!-- <label for="tipo_usuario" class="formulario__label" >Tipo Usuario:</label>-->
+
+
+                        <input type="hidden" class="formulario__input-txt" name="tipo_usuario" id="tipo_usuario" value="3">
+
                         <input type="submit" class="btn formulario__btn" value="Registrar">
                     </form> 
-                    $(mensaje)
-                    $(error)
                 </div>
             </section>
 

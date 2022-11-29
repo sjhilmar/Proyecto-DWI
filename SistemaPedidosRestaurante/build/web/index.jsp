@@ -38,6 +38,7 @@
                     <li class="menu__item"><a href="nosotros.jsp" class="menu__link">Nosotros</a></li>
                     <li class="menu__item"><a href="ProductoServlet?galeria" class="menu__link">Galería</a></li>
                     <li class="menu__item"><a href="contacto.jsp" class="menu__link">Contacto</a></li>
+                    <li class="menu__item"><a href="usuario.jsp" class="menu__link">Registrarse</a></li>
                 </ul>
                 <div class="social-icon">
                     <a href="" class="social-icon__link"><span class="icon-facebook"></span></a>
@@ -97,26 +98,26 @@
             </section>
         </main>
         <footer class="main-footer">
-                <div class="container container--flex">
-                    <div class="column column--33">
-                        <h2 class="column__title">¿Por qué visitarnos?</h2>
-                        <p class="column__txt">Descripción</p>
-                    </div>
-                    <div class="column column--33">
-                        <h2 class="column__title">Contáctanos</h2>
-                        <p class="column__txt">Av. Siempre Viva 350, Las flores, San Juan de Lurigancho, Perú</p>
-                        <p class="column__txt">Telefono: 965 458 425</p>
-                        <p class="column__txt">consultas@yourrestaurant.com</p>
-                    </div>
-                    <div class="column column--33">
-                        <h2 class="column__title">Síguenos en nuestras redes</h2>
-                        <p class="column__txt">Facebook</p>
-                        <p class="column__txt">Síguenos en Twitter</p>
-                        <p class="column__txt">Visita nuestro canal</p>
-                    </div>
-                    <p class="copy">© 2022 Tu Restaurante | Todos los derechos reservados</p>
+            <div class="container container--flex">
+                <div class="column column--33">
+                    <h2 class="column__title">¿Por qué visitarnos?</h2>
+                    <p class="column__txt">Descripción</p>
                 </div>
-            </footer>
+                <div class="column column--33">
+                    <h2 class="column__title">Contáctanos</h2>
+                    <p class="column__txt">Av. Siempre Viva 350, Las flores, San Juan de Lurigancho, Perú</p>
+                    <p class="column__txt">Telefono: 965 458 425</p>
+                    <p class="column__txt">consultas@yourrestaurant.com</p>
+                </div>
+                <div class="column column--33">
+                    <h2 class="column__title">Síguenos en nuestras redes</h2>
+                    <p class="column__txt">Facebook</p>
+                    <p class="column__txt">Síguenos en Twitter</p>
+                    <p class="column__txt">Visita nuestro canal</p>
+                </div>
+                <p class="copy">© 2022 Tu Restaurante | Todos los derechos reservados</p>
+            </div>
+        </footer>
         <script src="js/menu.js"></script>
     </body>
 </html>

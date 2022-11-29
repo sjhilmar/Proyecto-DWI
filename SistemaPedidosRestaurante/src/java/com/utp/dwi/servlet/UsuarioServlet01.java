@@ -92,7 +92,7 @@ public class UsuarioServlet01 extends HttpServlet {
             String ape = request.getParameter("apellidos");
             int td = Integer.parseInt(request.getParameter("tipo_documento"));
             String ndoc = request.getParameter("numero_documento");
-            String corr = request.getParameter("correo");
+            String corr = request.getParameter("Correo");
             String dep = request.getParameter("departamento");
             String pro = request.getParameter("Provincia");
             String dis = request.getParameter("Distrito");
