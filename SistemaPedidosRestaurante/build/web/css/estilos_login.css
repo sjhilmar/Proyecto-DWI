@@ -1,0 +1,146 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 29/11/2022, 11:49:19 PM
+    Author     : Administrador
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&family=Pacifico&display=swap');
+
+
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+
+}
+.container{
+    background-color: silver;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 50px;
+
+}
+.banner{
+    margin-top: -60px;
+    position: relative;
+}
+.banner:before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.70);
+    z-index: 1000;
+    top:0;
+
+}
+.banner{
+    margin-top: -480px;
+    z-index: -500;
+}
+
+.banner__img{
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+}
+
+.main-header__contactInfo__phone,.main-header__contactInfo__addres{
+    padding-right: 0;
+    font-size: 1.15em;
+}
+
+
+.container02{
+    width: 100%;
+    margin: auto;
+
+}
+.container02--flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.8em;
+    color: #DE423A;
+    padding: 10px;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+}
+
+.logo{
+    color:white;
+}
+
+.logo{
+    font-size: 2em;
+}
+
+.icon-menu{
+    display: block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    height: 40px;
+    width: 40px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+
+
+.main-header[class*="icon-"]:before{
+    position: relative;
+    top: 2px;
+    right: 5px;
+
+}
+
+.main-header{
+    width: 100%;
+
+}
+
+.main-header__contactInfo{
+    text-align: right;
+}
+.main-header__contactInfo__phone{
+    background: #DE423A;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+
+.main-header__contactInfo__phone{
+    background: none;
+}
+.main-header__contactInfo__addres{
+    color:white;
+}
+.main-nav{
+    background: rgba(0,0,0,0.85)
+}
+
+.main-header[class*="location-"]:before{
+    position: relative;
+    top: 2px;
+    right: 5px;
+
+}
+
+     .main-header__contactInfo__phone,.main-header__contactInfo__addres{
+        padding-right: 0;
+        font-size: 1.15em;
+    }

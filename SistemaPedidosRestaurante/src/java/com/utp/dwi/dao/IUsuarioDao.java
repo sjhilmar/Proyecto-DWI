@@ -22,5 +22,5 @@ public interface IUsuarioDao {
 
     void eliminar(int UserID) throws SQLException;
 
-   
+    String ValidarUsuario(UsuarioBean usuario) throws SQLException;
 }

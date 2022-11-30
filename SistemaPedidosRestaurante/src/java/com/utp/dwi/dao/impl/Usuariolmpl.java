@@ -4,7 +4,6 @@
  */
 package com.utp.dwi.dao.impl;
 
-
 import com.utp.dwi.bean.UsuarioBean;
 import com.utp.dwi.dao.IUsuarioDao;
 import com.utp.dwi.util.Conexion;
@@ -18,30 +17,25 @@ import java.util.List;
  *
  * @author Administrador
  */
-public class Usuariolmpl implements IUsuarioDao{
-      protected Connection con = null;
+public class Usuariolmpl implements IUsuarioDao {
+
+    protected Connection con = null;
     protected PreparedStatement stmt = null;
     protected String mensaje = "";
 
     //String query = "INSERT INTO producto (codigoProducto,descripcion,precioUnitario,observacion,tipoProductoID,estadoID) VALUES(?,?,?,?,?,?);";
-
-      
-
-    
-
-   // @Override
-   // public List<UsuarioBean> Listar(String descripcion) throws SQLException {
+    // @Override
+    // public List<UsuarioBean> Listar(String descripcion) throws SQLException {
     //    throw new UnsupportedOperationException("Not supported yet."); // 
     //}
-
     @Override
     public String insertar(UsuarioBean usuario) throws SQLException {
-      String query = "INSERT INTO usuario (userID, usuario,contrasenia,nombre,apellidos,tipoDocumentoID,numeroDocumento,correo,departamento,provincia,distrito,direccion,tipoUsuarioID) VALUES(null,?,?,?,?,?,?,?,?,?,?,?,?);";
-    
-      try {
+        String query = "INSERT INTO usuario (userID, usuario,contrasenia,nombre,apellidos,tipoDocumentoID,numeroDocumento,correo,departamento,provincia,distrito,direccion,tipoUsuarioID) VALUES(null,?,?,?,?,?,?,?,?,?,?,?,?);";
+
+        try {
             con = Conexion.obtenerConexion();
             stmt = con.prepareStatement(query);
-          //  stmt.setInt(0, usuario.getUserID());
+            //  stmt.setInt(0, usuario.getUserID());
             stmt.setString(1, usuario.getUsuario());
             stmt.setString(2, usuario.getContrasenia());
             stmt.setString(3, usuario.getNombre());
@@ -52,30 +46,28 @@ public class Usuariolmpl implements IUsuarioDao{
             stmt.setString(8, usuario.getDepartamento());
             stmt.setString(9, usuario.getProvincia());
             stmt.setString(10, usuario.getDistrito());
-            stmt.setString(11, usuario.getDireccion());            
+            stmt.setString(11, usuario.getDireccion());
             stmt.setInt(12, usuario.getTipoUsuarioBean());
             stmt.executeUpdate();
 
-            mensaje="Agregado";
+            mensaje = "Agregado";
         } catch (Exception e) {
-           mensaje = e.getMessage();
+            mensaje = e.getMessage();
 
-        } 
+        }
 
         return mensaje;
-    
+
     }
 
-   // @Override
-   // public UsuarioBean actualizar(UsuarioBean producto) throws SQLException {
-   //     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-   // }
- 
-   // @Override
-   // public void eliminar(int UserID) throws SQLException {
-   //     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-   // }
-
+    // @Override
+    // public UsuarioBean actualizar(UsuarioBean producto) throws SQLException {
+    //     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // }
+    // @Override
+    // public void eliminar(int UserID) throws SQLException {
+    //     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // }
     @Override
     public List<UsuarioBean> Listar(String descripcion) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -91,5 +83,32 @@ public class Usuariolmpl implements IUsuarioDao{
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-   
+    ResultSet rows;
+
+    @Override
+    public String ValidarUsuario(UsuarioBean usuario) throws SQLException {
+        String query = "SELECT * FROM usuario WHERE usuario = ? AND contrasenia = ?";
+
+        try {
+            con = Conexion.obtenerConexion();
+            stmt = con.prepareStatement(query);
+            stmt.setString(1, usuario.getUsuario());
+            stmt.setString(2, usuario.getContrasenia());
+            rows = stmt.executeQuery();
+
+            //mensaje = "Conectar";
+            if (rows.next()) {
+                mensaje = "Conectar";
+            }else {
+                mensaje = "Error";
+            }
+
+        } catch (Exception e) {
+            mensaje = e.getMessage();
+
+        }
+        // mensaje = "error";
+        return mensaje;
+
+    }
 }

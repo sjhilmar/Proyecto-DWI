@@ -41,6 +41,10 @@ public class UsuarioServlet01 extends HttpServlet {
             InsertarUsuario(request, response);
         }
         
+        if (accion.equalsIgnoreCase("LoguearUsuario")) {
+            LoguearUsuario(request, response);
+        }
+        
         
     }
 
@@ -129,6 +133,35 @@ public class UsuarioServlet01 extends HttpServlet {
             request.getRequestDispatcher("usuario.jsp").forward(request, response);
         }
         
+    }
+
+    private void LoguearUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+
+            String usu = request.getParameter("usuario");
+            String con = request.getParameter("contrasenia");
+            
+            UsuarioBean ub = new UsuarioBean();
+            ub.setUsuario(usu);
+            ub.setContrasenia(con);
+            
+             String mensaje = Ul.ValidarUsuario(ub);
+
+            if (mensaje.equals("Conectar")) {
+               // request.setAttribute("mensaje", mensaje);
+                 request.getRequestDispatcher("index.jsp").forward(request, response);
+            } else {
+               // request.setAttribute("error", mensaje);
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
+            }
+            
+          
+           
+         } catch (Exception e) {
+            request.setAttribute("error", e);
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
+        }
+            
     }
 
 }
