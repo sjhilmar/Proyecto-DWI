@@ -41,8 +41,8 @@ body{
 
 }
 .banner{
-    margin-top: -480px;
-    z-index: -500;
+    margin-top: -570px;
+    z-index: -300;
 }
 
 .banner__img{

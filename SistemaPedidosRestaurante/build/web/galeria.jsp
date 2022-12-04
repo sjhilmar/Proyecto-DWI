@@ -41,7 +41,7 @@
                     <li class="menu__item"><a href="nosotros.jsp" class="menu__link">Nosotros</a></li>
                     <li class="menu__item"><a href="ProductoServlet?galeria" class="menu__link menu__link--select">Galería</a></li>
                     <li class="menu__item"><a href="contacto.jsp" class="menu__link">Contacto</a></li>
-                     <li class="menu__item"><a href="usuario.jsp" class="menu__link">Registrarse</a></li>
+                      <li class="menu__item"><a href="Login.jsp" class="menu__link">Login</a></li>
                 </ul>
                 <div class="social-icon">
                     <a href="" class="social-icon__link"><span class="icon-facebook"></span></a>

@@ -38,7 +38,7 @@
                     <li class="menu__item"><a href="nosotros.jsp" class="menu__link">Nosotros</a></li>
                     <li class="menu__item"><a href="ProductoServlet?galeria" class="menu__link">Galería</a></li>
                     <li class="menu__item"><a href="contacto.jsp" class="menu__link">Contacto</a></li>
-                    <li class="menu__item"><a href="usuario.jsp" class="menu__link">Registrarse</a></li>
+                   
                     <li class="menu__item"><a href="Login.jsp" class="menu__link">Login</a></li>
                 </ul>
                 <div class="social-icon">
@@ -57,7 +57,7 @@
             <section class="group group--color">
                 <div class="container">
                     <h2 class="main__title">Bienvenido a su restaurante</h2>
-                    <p class="main-txt">Descripción 01</p>
+                    <p class="main-txt">Bienvenido ${usu}</p>
                 </div>
             </section>
             <section class="group main__about__description">

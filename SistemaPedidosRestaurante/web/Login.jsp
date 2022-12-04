@@ -15,6 +15,15 @@
         <link href="css/estilos_login.css" rel="stylesheet" type="text/css"/>
         <title>Login</title>
     </head>
+    <% String Alerta="";
+        if(request.getParameter("validar")!=null){
+           int val=Integer.parseInt(request.getParameter("validar"));
+            if(val==0){
+                Alerta="Error de usuario y/o conteseña";
+             }
+        }
+    %>
+    
     <body >
         <header class="main-header">
             <div class="container02 container02--flex">
@@ -46,15 +55,16 @@
                     <input type="password" class="form-control" name="contrasenia" id="contrasenia" placeholder="Ingresar Password">
                 </div>
                 <input type="submit" class="btn btn-danger btn-block" value="Login" >
-
+                <p stryle="color: red;" align="center"><%=Alerta%></p>
             </form>
-
+            
         </div>
-
+        <p><center><a href="usuario.jsp" class="main-header__contactInfo__addres" >Registrar Usuario</a></center>
         <section class="banner">
             <img src="img/banner_about.jpg" alt="" class="banner__img">
 
         </section>
+        
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
