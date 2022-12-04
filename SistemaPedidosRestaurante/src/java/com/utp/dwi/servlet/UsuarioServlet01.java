@@ -126,7 +126,7 @@ public class UsuarioServlet01 extends HttpServlet {
                 request.setAttribute("error", mensaje);
             }
 
-            request.getRequestDispatcher("usuario.jsp").forward(request, response);
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
 
         } catch (Exception e) {
             request.setAttribute("error", e);
@@ -148,11 +148,15 @@ public class UsuarioServlet01 extends HttpServlet {
              String mensaje = Ul.ValidarUsuario(ub);
 
             if (mensaje.equals("Conectar")) {
+                int validar=1;
                // request.setAttribute("mensaje", mensaje);
-                 request.getRequestDispatcher("index.jsp").forward(request, response);
+               request.getSession().setAttribute("usu", usu);
+                 request.getRequestDispatcher("index.jsp?usuario=").forward(request, response);
             } else {
+                int validar=0;
+                
                // request.setAttribute("error", mensaje);
-                request.getRequestDispatcher("Login.jsp").forward(request, response);
+                request.getRequestDispatcher("Login.jsp?validar="+validar).forward(request, response);
             }
             
           
